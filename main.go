@@ -18,7 +18,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func payHandler(w http.ResponseWriter, r *http.Request) {
-	str := "Hellow, World!"
+	str := "New payment processed!"
 	b := []byte(str)
 
 	_, err := w.Write(b)
@@ -30,7 +30,7 @@ func payHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func cancelHandler(w http.ResponseWriter, r *http.Request) {
-	str := "Hellow, World!"
+	str := "Payment cancelled!"
 	b := []byte(str)
 
 	_, err := w.Write(b)
