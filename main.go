@@ -45,4 +45,10 @@ func main() {
 	http.HandleFunc("/default", handler)
 	http.HandleFunc("/pay", payHandler)
 	http.HandleFunc("/cancel", cancelHandler)
+
+	fmt.Println("Starting listening and serving")
+	err := http.ListenAndServe(":9091", nil)
+	if err != nil {
+		fmt.Println("An error occured", err.Error())
+	}
 }
